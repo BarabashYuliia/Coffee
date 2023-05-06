@@ -1,5 +1,5 @@
 @use 'helpers' as *;
-// PICTURES SLIDE
+
 %font-title-pictures {
   @include font-style;
   text-transform: uppercase;
@@ -50,4 +50,78 @@
 .text-standart--pictures {
   @extend %font-card-price;
 }
-// PICTURES SLIDE
+
+.nav__link {
+  @include font-style (12px, 18px, $blue);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 900px) {
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+.cart {
+  &__text {
+    @include font-style (12px, 18px, $blue);    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__number {
+    @include font-style (11px, 18px, $white);
+    text-align: center;
+  }
+}
+
+.hero {
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style (12px, 18px, $white);    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__h1 {
+    @include font-style (47px, 60px, $white);    
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    @include font-style (17px, 30px, $white);
+  }
+
+  &__btn {
+    @include font-style (12px, 18px, $blue);    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.subtitle {
+  &__text {
+    @include font-style (16px, 28px, $blue);
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__link {
+    @include font-style (15px, 28px, $pink);
+  }
+}
+
+.heading__h2 {
+  margin: 0 auto;
+  max-width: 650px;
+  @include font-style (28px, 40px, $blue);
+}
