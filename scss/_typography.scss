@@ -1,5 +1,56 @@
 @use 'helpers' as *;
 
+%font-title-pictures {
+  @include font-style;
+  text-transform: uppercase;
+}
+%font-card-name {
+  @include font-style($size:20px, $line-h: 30px);
+  text-transform: capitalize;
+}
+%font-card-price {
+  @include font-style($size:16px, $line-h: 28px, $color: rgba(29, 31, 46, 0.7));
+}
+%font-card-new-price {
+  @include font-style($size:19px, $line-h: 32px, $color:rgba(162, 95, 75, 1));
+}
+%font-h3 {
+  @include font-style($size:36px, $line-h: 50px);
+}
+.title--pictures {
+  @extend %font-title-pictures;
+}
+.heading--pictures {
+  padding: 0 0 100px 0;
+  @include flex-box($align: center, $justify:center);
+}
+.card-name {
+  @extend %font-card-name;
+  margin: 0 0 5px 0;
+}
+.card-text--first {
+  padding: 35px 0 15px 0;
+}
+.price {
+  @extend %font-card-price;
+}
+.new-price {
+  @extend %font-card-new-price;
+  padding: 0 10px 0 0;
+}
+.old-price {
+  text-decoration: line-through;
+  text-decoration-color: rgba(29, 31, 46, 0.7);
+}
+.title-image--pictures {
+  @extend %font-h3;
+  max-width: 237px;
+  margin: 14px 0 15px 0;
+}
+.text-standart--pictures {
+  @extend %font-card-price;
+}
+
 .nav__link {
   @include font-style (12px, 18px, $blue);
   letter-spacing: 2px;
