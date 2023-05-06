@@ -5,3 +5,9 @@
   align-items: $align;
   gap: #{$gap}px;
 }
+@mixin font-style ($size:12px, $line-h: 18px, $color: #1d1f2e) {
+  font-weight: 400;
+  font-size: $size;
+  line-height: $line-h;
+  color: $color;
+}
