@@ -11,6 +11,50 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <!-- header  -->
+  <header class="header">
+    <div class="container">
+      <div class="header__items">
+        <a href="#">
+          <img class="header__logo" src="images/logo.svg" alt="">
+        </a>
+        <nav id="nav__responsive" class="nav nav_resp">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">Our Products</a>
+            </li>
+            <li class="nav__item">
+              <a href="#posts" class="nav__link">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a href="#blog" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#blog" class="nav__link">Contact</a>
+            </li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">Styleguide</a>
+            </li>
+          </ul>
+          <div class="cart">
+            <img class="cart__img" src="images/busket.svg" alt="">
+            <a href="" class="cart__link">
+              <p class="cart__text">Cart</p>
+            </a>
+            <div class="cart__number">0</div>
+          </div>
+          <div class="burger__menu"  onclick="myFunction()">
+            <span class="burger__menu--line"></span>
+            <span class="burger__menu--line"></span>
+            <span class="burger__menu--line"></span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
   <main>
     <section class="container">
       <!-- FIRST BLOCK -->
@@ -138,9 +182,38 @@
             <p class="text-standart--pictures">The most versatile furniture system ever created. Designed to fit your life.</p>
             <button class="shopping" type="submit">start shopping</button>
           </div>
+    <!-- section hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__title">Best place to buy design</p>
+          <h1 class="hero__h1">Coffee Mugs</h1>
+          <p class="hero__subtitle">The most versatile furniture system ever created. Designed to fit your life, made to move and grow.</p>
+          <button class="hero__btn">Explore Our Products</button>
+        </div>
+      </div>
+    </section>
+    <!-- section subtitle  -->
+    <section class="subtitle">
+      <div class="container">
+        <div class="subtitle__content">
+          <h2 class="heading__h2">Even the all-powerful Pointing has no control about the blind texts.</h2>
+          <p class="subtitle__text">It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          <a href="" class="subtitle__link">Read the full Story</a>
         </div>
       </div>
     </section>
   </main>
+   <!-- script -->
+   <script>
+    function myFunction() {
+      var x = document.getElementById("nav__responsive");
+      if (x.className === "nav nav_resp") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav nav_resp";
+      }
+    }
+    </script>
 </body>
 </html>
