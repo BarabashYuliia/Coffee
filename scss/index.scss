@@ -12,8 +12,10 @@
     @include flex-box;
     flex-wrap: wrap;
   }
-  @media screen and (max-width:375px) {
-    max-width: 300px;
+  @media screen and (max-width:800px) {
+    .card--first {
+      width: 380px;
+    }
   }
 }
 .divider {
@@ -31,6 +33,13 @@
     @media screen and (max-width:375px) {
       justify-content: center;
     }
+    @media screen and (max-width:800px) {
+      .card-pictures {
+        &:nth-child(3n+3) {
+          margin: auto;
+        }
+      }
+    }
   }
 }
 .third-block {
@@ -40,6 +49,11 @@
   & .image--pictures {
     @include flex-box;
     flex-wrap: wrap;
+    @media screen and (max-width:800px) {
+      .image-big {
+        width: 335px;
+      }
+    }
     & .text-content--pictures {
       max-width: 400px;
       width: 100%;
@@ -82,13 +96,19 @@
   @include flex-box;
   flex-wrap: wrap;
   @media screen and (max-width:375px) {
-    img {
+    .image-big {
       width: 355px;
     }
+  }
+  @media screen and (max-width:800px) {
+    max-width: 340px;
   }
   & .image-content-small {
     @include flex-box($direction: column);
     @media screen and (max-width:375px) {
+      flex-direction: row;
+    }
+    @media screen and (max-width:800px) {
       flex-direction: row;
     }
   }
