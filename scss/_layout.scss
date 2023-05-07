@@ -1,10 +1,10 @@
-@use 'helpers' as *;
+@use "helpers" as *;
 
 .header {
   padding: 15px 0;
 
   &__items {
-    @include flex-box (row, space-between, center, 10);
+    @include flex-box(row, space-between, center, 10);
   }
 
   &__logo {
@@ -40,14 +40,20 @@
 
   &__link {
     &:hover {
-      color:$pink;
+      color: $pink;
     }
   }
 }
 
 @keyframes line {
-  0%   {opacity: 0.3; left: 0px}
-  100% {opacity: 0; left: -90px}
+  0% {
+    opacity: 0.3;
+    left: 0px;
+  }
+  100% {
+    opacity: 0;
+    left: -90px;
+  }
 }
 
 .cart {
@@ -123,7 +129,7 @@
     height: 450px;
     padding-top: 60px;
   }
- 
+
   &__h1 {
     margin: 10px 0;
   }
@@ -136,10 +142,10 @@
     padding: 0 24px;
     border: none;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-      background-color: #A25F4B;
+      background-color: #a25f4b;
       color: $white;
     }
 
@@ -150,10 +156,13 @@
 }
 
 @keyframes text {
-  0%   {transform: scale(0)}
-  100% {transform: scale(1)}
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
 
 .hero__content {
   animation-name: text;
@@ -195,7 +204,7 @@
         animation-fill-mode: forwards;
       }
     }
-  }  
+  }
 }
 
 .burger__menu {
@@ -224,7 +233,7 @@
 
 .responsive {
   .nav__list {
-    transition: all .5s;
+    transition: all 0.5s;
     opacity: 0.9;
     display: flex;
     transform: translateY(0);
@@ -246,7 +255,7 @@
     }
 
     &--line:nth-child(2) {
-      display: none;      
+      display: none;
     }
 
     &--line {
@@ -255,5 +264,112 @@
       left: 0;
       transform: rotate(135deg);
     }
+  }
+}
+
+// Footer
+.subscribe {
+  height: 327px;
+  padding: 82px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: $blue;
+  p,
+  h3 {
+    margin: 0;
+  }
+  .subscribe__info,
+  .subscribe__h3 {
+    color: $white;
+  }
+  .card-date {
+    letter-spacing: 2px;
+  }
+  .subscribe__h3 {
+    font-size: 36px;
+    line-height: 50px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    font-weight: 400;
+    margin: 15px 0 25px;
+  }
+  .email {
+    padding: 18px 40px;
+    width: 350px;
+    background-color: transparent;
+    border: 1px solid #2f303e;
+    margin-right: 7px;
+    text-align: center;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  .button {
+    padding: 18px 25px;
+    background-color: #fff;
+    &:active {
+      opacity: 70%;
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .card-date {
+    margin-top: 3px;
+  }
+
+  .footer__text {
+    color: $blue;
+    opacity: 70%;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .footer__link:hover {
+    color: $pink;
+  }
+
+  .footer__nav {
+    margin-bottom: 10px;
+  }
+ 
+  .light-text {
+    opacity: 30%;
+  }
+
+  .footer__title {
+    margin-bottom: 22px;
+  }
+
+  .contact {
+    font-size: 23px;
+    margin: 24px 100px 54px 0;
+    a {
+      color: #1d1f2e;
+    }
+  }
+
+  .footer__text-margin {
+    margin-top: 81px;
   }
 }
