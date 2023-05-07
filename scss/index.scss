@@ -30,7 +30,7 @@
   & .cards--pictures {
     flex-wrap: wrap;
     @include flex-box;
-    @media screen and (max-width:375px) {
+    @media screen and (max-width:376px) {
       justify-content: center;
     }
     @media screen and (max-width:800px) {
@@ -95,7 +95,7 @@
   max-width: 460px;
   @include flex-box;
   flex-wrap: wrap;
-  @media screen and (max-width:375px) {
+  @media screen and (max-width:376px) {
     .image-big {
       width: 355px;
     }
@@ -105,7 +105,7 @@
   }
   & .image-content-small {
     @include flex-box($direction: column);
-    @media screen and (max-width:375px) {
+    @media screen and (max-width:376px) {
       flex-direction: row;
     }
     @media screen and (max-width:800px) {
